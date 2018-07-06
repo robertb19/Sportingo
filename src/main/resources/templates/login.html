@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+<div style="text-align: center">
+    <h1>Since you have already registered. Please now login, in order to use the application.</h1>
+    <h1 th:text="${information}"></h1>
+    <form th:object="${loginForm}" action="/login" method="post">
+        <input type="text" placeholder="Login" th:field="*{login}">
+        <input type="password" placeholder="Password" th:field="*{password}">
+        <input type="submit" value="Login!">
+    </form>
+</div>
+
+</body>
+</html>

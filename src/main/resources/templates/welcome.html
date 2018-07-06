@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Welcome! Please enter your location & select the sport to begin the search!</h1>
+    <form method="post" th:object="${locationForm}" action="/welcome">
+        <input type="text" th:field="*{district}" placeholder="district"> <br/>
+        <input type="text" th:field="*{streetName}" placeholder="street name" ><br/>
+        <input type="text" th:field="*{houseNumber}" placeholder="house number" ><br/>
+
+
+        <div class="col-lg-3">
+            <select class="form-control" id="sportsChoice" name="sportsChoice" th:field="*{sports}">
+                <option th:each="sport : *{getAllSports()}"
+                        th:value="${sport}"
+                        th:text="${sport}"></option>
+            </select>
+        </div>
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
