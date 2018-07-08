@@ -37,18 +37,19 @@ Will work on next after completing player profile classes.
 public class SearchService {
 
     @Autowired
-    SearchRepository searchRepository;
+    private SearchRepository searchRepository;
     @Autowired
-    LocationRepository locationRepository;
+    private LocationRepository locationRepository;
     @Autowired
-    PlayerRepository playerRepository;
+    private PlayerRepository playerRepository;
     @Autowired
-    PlayerService playerService;
-    private static SessionFactory factory;
+    private PlayerService playerService;
 
     private Location location;
+
     private Sports chosenSport;
-    String searchText = "Not searching yet";
+
+    private String searchText = "Not searching yet";
 
     public String getSearchText(){
         return searchText;

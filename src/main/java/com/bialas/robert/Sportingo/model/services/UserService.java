@@ -16,8 +16,10 @@ import java.util.Optional;
 public class UserService{
 
     @Autowired
-    UserRepository userRepository;
+    private UserRepository userRepository;
+
     private boolean isLoggedIn;
+
     private UserEntity userData;
 
     public boolean isLoggedIn() {

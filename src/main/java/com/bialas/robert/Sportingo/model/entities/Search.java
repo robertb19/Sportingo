@@ -14,19 +14,19 @@ public class Search {
     @Id
     @GeneratedValue
     @Column(name="searchid")
-    int id;
+    private int id;
     @OneToOne
     @JoinColumn(name = "player1id")
-    Player player1;
+    private Player player1;
     @OneToOne
     @JoinColumn(name = "player2id")
-    Player player2;
+    private Player player2;
     /*@Transient
     Sport sportChosen;*/
     @Column(name="sport")
-    String sport;
+    private String sport;
     @OneToOne
     @JoinColumn(name = "locationid")
-    Location location;
+    private Location location;
 
 }

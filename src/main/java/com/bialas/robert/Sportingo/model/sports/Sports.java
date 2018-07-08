@@ -9,7 +9,7 @@ import java.util.List;
 @Data
 public class Sports {
 
-    String sport;
+    private String sport;
 
     public static List<String> returnSports(){
 

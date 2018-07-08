@@ -15,7 +15,7 @@ import java.util.List;
 public class PlayerService {
 
     @Autowired
-    PlayerRepository playerRepository;
+    private PlayerRepository playerRepository;
     @Autowired
     private UserService userService;
 

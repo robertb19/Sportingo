@@ -12,9 +12,9 @@ public class UserEntity {
     @Id
     @GeneratedValue
     private int userid;
-    String login;
-    String password;
+    private String login;
+    private String password;
     @Column(name ="has_admin")
-    boolean hasAdmin;
+    private boolean hasAdmin;
 
 }

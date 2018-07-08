@@ -12,12 +12,12 @@ public class Location {
     @Id
     @GeneratedValue
     @Column(name="locationid")
-    int id;
+    private int id;
     //String coordianates;
-    String district;
+    private String district;
     @Column(name="street_name")
-    String streetName;
+    private String streetName;
     @Column(name="house_number")
-    int houseNumber;
+    private int houseNumber;
 
 }

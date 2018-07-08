@@ -11,18 +11,18 @@ public class Player {
 
     @Id
     @GeneratedValue
-    int playerid;
+    private int playerid;
     @OneToOne
     @JoinColumn(name = "userid")
-    UserEntity userEntity;
+    private UserEntity userEntity;
     @Column(name="rank_level")
-    int rankLevel = 0;
+    private int rankLevel = 0;
     @Column
-    boolean searching = false;
+    private boolean searching = false;
     @Column
-    String name;
+    private String name;
     @Column
-    String city;
+    private String city;
 
 
 }

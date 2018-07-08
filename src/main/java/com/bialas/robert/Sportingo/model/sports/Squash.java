@@ -6,8 +6,8 @@ import lombok.Data;
 @Data
 public class Squash implements Sport{
 
-    String level;
-    Player playerOne;
-    Player playerTwo;
+    private String level;
+    private Player playerOne;
+    private Player playerTwo;
 
 }

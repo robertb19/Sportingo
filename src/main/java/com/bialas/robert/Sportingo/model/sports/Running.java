@@ -7,8 +7,8 @@ import lombok.Data;
 @Data
 public class Running implements Sport{
 
-    Player playerOne;
-    Player playerTwo;
-    double distance;
+    private Player playerOne;
+    private Player playerTwo;
+    private double distance;
 
 }
