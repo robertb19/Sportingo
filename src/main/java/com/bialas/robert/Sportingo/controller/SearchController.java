@@ -15,20 +15,32 @@ public class SearchController {
     @Autowired
     SearchService searchService;
 
-    @GetMapping
+    @GetMapping("/welcome")
     public String search(Model model){
 
         model.addAttribute("locationForm", new LocationForm());
+        model.addAttribute("searchText", searchService.getSearchText());
 
         return "/welcome";
 
     }
 
-    @PostMapping
-    public String search(Model model, @ModelAttribute LocationForm locationForm){
+    @PostMapping("/welcome")
+    public String search(@ModelAttribute LocationForm locationForm){
+
         searchService.beginSearch(locationForm);
-        return "/welcome";
+        searchService.changeSearchTextToSearching();
+
+        return "redirect:/welcome";
     }
+
+    @PostMapping("/search")
+    public String search(){
+        searchService.createSearch();
+
+        return "redirect:/paired";
+    }
+
 
 }
 

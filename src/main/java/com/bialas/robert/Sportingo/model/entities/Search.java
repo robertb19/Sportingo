@@ -3,6 +3,8 @@ package com.bialas.robert.Sportingo.model.entities;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Entity
@@ -14,8 +16,11 @@ public class Search {
     @Column(name="searchid")
     int id;
     @OneToOne
-    @JoinColumn(name = "userid")
-    UserEntity userEntity;
+    @JoinColumn(name = "player1id")
+    Player player1;
+    @OneToOne
+    @JoinColumn(name = "player2id")
+    Player player2;
     /*@Transient
     Sport sportChosen;*/
     @Column(name="sport")

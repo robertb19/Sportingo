@@ -16,13 +16,6 @@ public class LocationForm {
     String sports;
 
     public static List<String> getAllSports(){
-        EnumSet enumSet = EnumSet.allOf(SportsList.class);
-        List<String> theSports = new ArrayList<>();
-
-        for(Object o : enumSet){
-            theSports.add(o.toString());
-        }
-
-        return theSports;
+        return Sports.returnSports();
     }
 }

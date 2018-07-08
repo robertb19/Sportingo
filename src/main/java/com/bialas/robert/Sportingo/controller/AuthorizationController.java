@@ -27,7 +27,7 @@ public class AuthorizationController {
     public String login(@ModelAttribute LoginForm loginForm, Model model){
         if(userService.doesUserExistByLogin(loginForm.getLogin())){
             if(userService.loginUser(loginForm))
-            return "redirect:/welcome";
+            return "redirect:/player";
         }
         model.addAttribute("information", "Error, the login or password is incorrect! Please try again");
         return "/login";

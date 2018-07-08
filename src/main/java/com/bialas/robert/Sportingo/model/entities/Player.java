@@ -5,7 +5,7 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Entity
-@Table(name="player")
+@Table
 @Data
 public class Player {
 
@@ -16,12 +16,14 @@ public class Player {
     @JoinColumn(name = "userid")
     UserEntity userEntity;
     @Column(name="rank_level")
-    int rankLevel;
-    @OneToOne
-    @JoinColumn(name = "locationid")
-    Location location;
-    @Column(name ="user_status")
-    String userStatus = "NOT_SEARCHING";
+    int rankLevel = 0;
+    @Column
+    boolean searching = false;
+    @Column
+    String name;
+    @Column
+    String city;
+
 
 }
 

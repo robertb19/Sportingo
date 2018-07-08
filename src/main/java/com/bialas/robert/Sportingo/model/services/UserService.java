@@ -10,9 +10,9 @@ import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
-
 @Service
 @Scope(proxyMode = ScopedProxyMode.TARGET_CLASS, value="session")
+
 public class UserService{
 
     @Autowired

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Please create your player profile in order to find partners!</h1>
+<form method="post" th:object="${playerForm}" action="/player">
+    <input type="text" th:field="*{name}" placeholder="First name"> <br/>
+    <input type="text" th:field="*{city}" placeholder="City" ><br/>
+    <input type="submit" value="Create player profile!">
+</form>
+</body>
+</html>
